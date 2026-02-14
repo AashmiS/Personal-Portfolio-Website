@@ -1,10 +1,14 @@
 body{
     margin: 0;
     font-family:'Times New Roman', Times, serif ;
+    font-size: medium;
     background-color: grey;
     scroll-behavior: smooth;
 }
 header{
+    font-family:'Times New Roman', Times, serif ;
+    font-style:oblique;
+    font-size: larger;
     background-color: #222;
     color: white;
     padding: 30px 40px;
@@ -41,11 +45,10 @@ nav a:hover{
 }
 section{
     margin:auto;
-    padding: 30px;
-    max-width: 900px;
-      
+    padding: 1%;
+    max-width: 800px;
       background: white;
-      border-radius: 10px;
+  
 }
 
 
@@ -58,4 +61,21 @@ h2{
 }
 .header-left{
     margin-left: 10px;
+}
+.bullet::before{
+    content: "• ";
+    font-weight: bold;
+}
+p.edu{
+    margin: 3px 0;
+     
+}
+.email::before{
+    content: "\2709"
+}
+/*.phone_no::before{
+    content: "☎ "
+}*/
+.linkedin::before{
+     content: "\1F310"
 }
