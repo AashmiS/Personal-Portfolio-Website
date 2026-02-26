@@ -17,8 +17,8 @@ header{
     align-items: center;
 }
 header img{
-    width:120px;
-    height: 130px;
+    width: 148px;px;
+    height:auto;
     border-radius:  50px;
     object-fit: cover;
     border: 3px solid white;
@@ -46,7 +46,6 @@ nav a:hover{
 section{
     margin:auto;
     padding: 1%;
-    max-width: 800px;
       background: white;
   
 }
@@ -67,6 +66,7 @@ h2{
     font-weight: bold;
 }
 p.edu{
+    padding-left: 10px;
     margin: 3px 0;
      
 }
