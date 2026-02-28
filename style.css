@@ -1,33 +1,70 @@
 body{
-    margin: 0;
+    margin: 5px;
     font-family:'Times New Roman', Times, serif ;
     font-size: medium;
     background-color: grey;
     scroll-behavior: smooth;
 }
+
+
 header{
     font-family:'Times New Roman', Times, serif ;
     font-style:oblique;
     font-size: larger;
     background-color: #222;
     color: white;
-    padding: 30px 40px;
+    padding: 25px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 header img{
-    width: 148px;px;
+   width: 148px; 
     height:auto;
     border-radius:  50px;
     object-fit: cover;
     border: 3px solid white;
+    flex-shrink: 0;
+}
+@media(max-width:600px) {
+    header{
+        flex-direction: column;
+        text-align: center;
+    }
+    header img{
+        width: 120px;
+        margin-top: 15px;
+    }
 }
 nav{
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;          
     gap: 25px;   
     background-color: #333;
     padding: 15px 40px;
+    justify-content: center;
+}
+
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+
+.nav-links.active {
+    display: flex;
 }
 
 nav a{
@@ -61,9 +98,58 @@ h2{
 .header-left{
     margin-left: 10px;
 }
-.bullet::before{
+.Bullet::before{
     content: "• ";
     font-weight: bold;
+}
+
+
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;          
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links a {
+        padding: 8px 12px;
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+.skills-container{
+    display:flex;
+    flex-wrap: wrap;   
+    gap: 15px;
+}
+.skill{
+   
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+   width: auto;
+    border: 1px solid #ccc;
+}
+/*.edu-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}*/
+.education{
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: auto;
+    border: 1px solid #ccc;
 }
 p.edu{
     padding-left: 10px;

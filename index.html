@@ -19,22 +19,25 @@
         </div>
     </header>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
     <main>
         <section id="home">
-            <p> Hi, I’m Aashmi — Computer Science Engineering Student & Aspiring Web Developer
+            <p style="margin-left: 30px;">Hi, I’m Aashmi — Computer Science Engineering Student & Aspiring Web Developer
                 Passionate about building responsive, user-friendly websites and exploring creative technical projects.
                 Currently pursuing a B.Tech in Computer Science (2024–2028) at St. Thomas College of Engineering and
                 Technology.</p>
         </section>
         <section id="about">
             <h2>About</h2>
-            <p>I am a second-year B.Tech Computer Science student specializing in web development, with a passion for
+            <p >I am a second-year B.Tech Computer Science student specializing in web development, with a passion for
                 learning technology step by step. I enjoy turning ideas into responsive, user-friendly websites and
                 exploring creative technical projects that combine design and functionality.
                 As a team collaborator and creative thinker, I thrive in group projects where I can contribute ideas and
@@ -45,24 +48,29 @@
         </section>
         <section id="education">
             <h2>Education</h2>
-            <p class="Bullet"><b> ST. THOMAS COLLEGE OF ENGINEERING AND TECHNOLOGY,MATTANUR</b> </p>
-
+            <h3>College </h3>
+<!--<div class="edu-container">-->
+    <div class="education">
+            <p><b> ST. THOMAS COLLEGE OF ENGINEERING AND TECHNOLOGY,MATTANUR</b></p>
             <p class="edu">B.Tech CSE(6.84cgpa)</p>
             <p class="edu">2024-28</p>
-            <p class="Bullet"><b>RANIJAI HSS</b> </p>
+    </div>
+    <br>
+    <h3>School</h3>
+    <div class="education">
+            <p ><b>RANIJAI HSS</b> </p>
             <p class="edu">Plus two</p>
             <p class="edu">2022-24</p>
+    </div>
         </section>
         <section id="skills">
             <h2>Skills</h2>
-            <ul>
-                <li>
-                    HTML(Intermidate)
-                </li>
-                <li>
-                    CSS(basics)
-                </li>
-            </ul>
+           <div class="skills-container">
+                <div class="skill">
+                    
+                        <p>HTML/CSS</p>
+                </div>     
+            </div>
         </section>
         <section id="contact">
             <h2>Contact</h2>
@@ -71,6 +79,18 @@
 
         </section>
     </main>
+    <script>
+        // simple menu toggle for small screens
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.querySelector('.menu-toggle');
+            const links = document.querySelector('.nav-links');
+            if (toggle && links) {
+                toggle.addEventListener('click', function() {
+                    links.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
